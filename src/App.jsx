@@ -33,7 +33,7 @@ const completedTasks = JSON.parse(
   return (
     <div className='min-h-screen w-full flex flex-col items-center'>
       <Header/>
-      <Refresh/>
+      <Refresh updateCompleted={updateCompleted} updateTasks={updateTasks}/>
       <TodoList tasks={tasks} completed={completed} updateTasks={updateTasks} updateCompleted={updateCompleted}/>
     </div>
   )
