@@ -9,7 +9,7 @@ export default function TodoList({tasks,completed,updateTasks,updateCompleted}){
         setAdd(true);
     }
     return (
-        <div className="w-full font-semibold px-20 flex flex-col">
+        <div className="w-full font-semibold px-10 sm:px-20 flex flex-col">
             <h1>Things to do</h1>
             <div>
                 {tasks.map((task)=>(
