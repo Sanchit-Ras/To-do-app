@@ -2,15 +2,16 @@ import { useEffect, useState } from 'react'
 import Header from './Header.jsx';
 import Refresh from './Refresh.jsx';
 import TodoList from './TodoList.jsx';
+import { sampleTasks,sampleTasksDone } from './SampleData.js';
 function App() {
 const savedTasks = JSON.parse(
   localStorage.getItem("To-do") ||
-  '[{"id":1,"title":"Clean my computer"},{"id":2,"title":"Buy a keyboard"}]'
+  JSON.stringify(sampleTasks)
 );
 
 const completedTasks = JSON.parse(
   localStorage.getItem("completed") ||
-  '[{"id":3,"title":"Write an article about @xstate/test"},{"id":4,"title":"Write an article about @xstate"}]'
+  JSON.stringify(sampleTasksDone)
 );
 
 

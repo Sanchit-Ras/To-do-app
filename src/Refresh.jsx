@@ -1,7 +1,8 @@
+import { sampleTasks,sampleTasksDone } from './SampleData.js';
 export default function Refresh({updateTasks,updateCompleted}){
     function handleRefresh(){
-        updateTasks([{"id":1,"title":"Clean my computer"},{"id":2,"title":"Buy a keyboard"}]);
-        updateCompleted([{"id":3,"title":"Write an article about @xstate/test"},{"id":4,"title":"Write an article about @xstate"}]);
+        updateTasks(sampleTasks);
+        updateCompleted(sampleTasksDone);
     }
     return (
         <div className="md:flex-row w-full px-10 sm:px-20 py-5 flex flex-col items-start gap-2">
